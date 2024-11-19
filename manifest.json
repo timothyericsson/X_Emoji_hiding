@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Twitter Emoji Blocker",
+  "version": "1.2",
+  "description": "Automatically hides tweets from users with specified emojis in their display names.",
+  "permissions": [],
+  "host_permissions": ["https://twitter.com/*", "https://*.twitter.com/*", "https://x.com/*", "https://*.x.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://twitter.com/*", "https://*.twitter.com/*", "https://x.com/*", "https://*.x.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
